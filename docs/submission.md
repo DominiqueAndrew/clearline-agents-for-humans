@@ -27,4 +27,4 @@ Use `docs/demo-script.md`. The final public YouTube or Vimeo URL is intentionall
 
 The Devpost Hackathons plugin snapshot on 2026-08-27 reports five criteria: Technological Implementation, Design, Potential Impact, Creativity & Originality, and Presentation. Clearline’s evidence for each is mapped in [`docs/judge-brief.md`](judge-brief.md). The required submission form also asks for submitter type, country of residence, track, public repo URL, architecture upload, AWS Builder ID, and a required public video; optional fields include a live demo, testing instructions, and an AWS Builder post. These account and agreement fields must be completed by the participant at submission time.
 
-Use [`docs/devpost-form-packet.md`](devpost-form-packet.md) for draft answers and the final participant-controlled checklist.
+Use [`docs/devpost-form-packet.md`](devpost-form-packet.md) for draft answers, the exact human action pack, and the final participant-controlled checklist.
