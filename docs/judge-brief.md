@@ -27,7 +27,7 @@ Completed in this repository:
 - Science/evidence appendix: [`SCIENCE_APPENDIX.md`](../SCIENCE_APPENDIX.md).
 - Testing instructions for a judge: [`README.md`](../README.md) and the appendix reproduction section.
 - One-command demo smoke check: `python -m clearline.smoke`.
-- Latest public-main receipt (2026-08-27, commit `a84346ae9c2788bbd87e01cc71f93b2de9bdb58b`): fresh clone install passed `pip check`, `15 passed`, and the smoke invariants (`8` total, `5` filed, `3` pending, no external side effects); the loopback HTTP rehearsal also verified approval, repeat-sweep idempotency, and restart persistence.
+- Verified public-code receipt (2026-08-27, tested at commit `a84346ae9c2788bbd87e01cc71f93b2de9bdb58b`; later documentation-only commits preserve that tested code): fresh clone install passed `pip check`, `15 passed`, and the smoke invariants (`8` total, `5` filed, `3` pending, no external side effects); the loopback HTTP rehearsal also verified approval, repeat-sweep idempotency, and restart persistence.
 
 Human-only gates still open:
 
