@@ -64,6 +64,7 @@ python -m clearline.smoke
 - Architecture: [`docs/architecture.md`](docs/architecture.md)
 - Two-minute recording plan: [`docs/demo-script.md`](docs/demo-script.md)
 - Truthful submission checklist: [`docs/submission.md`](docs/submission.md)
+- Human-gated Devpost form packet: [`docs/devpost-form-packet.md`](docs/devpost-form-packet.md)
 - Science and engineering appendix: [`SCIENCE_APPENDIX.md`](SCIENCE_APPENDIX.md)
 
 ## License
