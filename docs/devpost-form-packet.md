@@ -29,7 +29,13 @@ These are required by the current form but cannot be inferred safely:
 
 ## Registration and submission gates
 
-- Registration form says team preference and several experience questions are required; the participant must answer them.
+- Registration team preference is required: choose exactly one of `Working solo`, `Looking for teammates`, or `Already have a team`.
+- The current registration form requires these exact custom answers; use the live form’s options and do not invent participant facts:
+  - `3985` AWS experience: `New to AWS` / `Some experience (used a few services)` / `Comfortable (build on AWS regularly)` / `Expert (AWS in production daily)`.
+  - `4158` Bedrock AgentCore or Strands experience: `Never use either` / `Used Bedrock AgentCore only` / `Used Strands SDK only` / `Used both` / `Heard of them but haven't built with either`.
+  - `4159` AI-agent experience: `None yet` / `Tinkered with LLM apps / prompt` / `Built a basic agent (tool calling, RAG)` / `Built production agent systems`.
+  - `4160` participation: `Solo` / `I have a team already` / `Looking to join a team` / `Not sure yet`.
+  - `4161` help desired (multi-select): `Live mentorship / office hours`, `Starter templates and sample code`, `Workshops and tutorials`, `A sandbox environment to experiment in`, and/or `Clear dos and reference architectures`.
 - The rules page states the participant must be above the legal age of majority in their country of residence and observes the listed geographic exclusions; the participant must verify eligibility.
 - The rules require a new project created during the submission period. This repository was created during the current submission period; the participant must disclose any pre-existing code or work and confirm that every third-party integration is authorized.
 - Devpost requires explicit agreement to the official rules and Devpost terms. No agreement is recorded by this file.
