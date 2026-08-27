@@ -21,3 +21,7 @@ CLEARLINE_STATE_FILE="$(mktemp -d)/state.json" .venv/bin/python -m clearline --p
 5. **Close on the boundary (1:35–2:00).** Point to the audit feed. “Every automated or human decision is visible. The model can help explain a case in live mode, but the policy gate and human approval are the control plane.”
 
 The recording must show the working interface, not only this script. Keep the final video public and at most five minutes for Devpost; do not claim a video URL until it is actually published.
+
+## Optional Strands proof shot
+
+If the participant has Bedrock access, run a separate clean recording state with `CLEARLINE_STRANDS_LIVE=1` as described in the README. Open one pending invoice and briefly point to the `STRANDS RATIONALE` block: “This is where the Strands adapter adds explanation. It does not own the policy result or the human action.” If live access is unavailable, keep the credential-free recording; do not imply that a live AWS invocation was performed. The committed adapter, tool seam, fallback test, and architecture remain the evidence for the implementation criterion.
