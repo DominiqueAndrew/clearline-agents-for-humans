@@ -24,4 +24,4 @@ clearline = "clearline.__main__:main"
 include = ["clearline*"]
 
 [tool.setuptools.package-data]
-clearline = ["static/*.html", "static/*.css", "static/*.js"]
+clearline = ["static/*.html", "static/*.css", "static/*.js", "static/*.svg"]
