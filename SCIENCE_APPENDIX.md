@@ -97,6 +97,8 @@ git diff --check
 
 The smoke command returned `Clearline smoke passed` with `8` invoices, `5` filed, `3` pending, `repeat_sweep_audit=8`, `approval_persisted=true`, and `external_side_effects=false`.
 
+The published distribution was also checked separately from the checkout on 2026-08-27. A PEP 517 wheel build produced `clearline-0.1.0-py3-none-any.whl`; that wheel was installed into a fresh virtual environment from a temporary working directory, where `pip check`, the installed `clearline --help` and `python -m clearline --help` entry points, and `python -m clearline.smoke` all passed. The import resolved from temporary `site-packages`, which guards against accidentally testing the editable source tree. The packaged smoke result matched the source result: `8` invoices, `5` filed, `3` pending, `repeat_sweep_audit=8`, `approval_persisted=true`, and `external_side_effects=false`.
+
 The default server is credential-free:
 
 ```bash
