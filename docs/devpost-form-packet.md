@@ -40,6 +40,7 @@ These are required by the current form but cannot be inferred safely:
 - The rules page states the participant must be above the legal age of majority in their country of residence and observes the listed geographic exclusions; the participant must verify eligibility.
 - The rules require a new project created during the submission period. This repository was created during the current submission period; the participant must disclose any pre-existing code or work and confirm that every third-party integration is authorized.
 - Before submission, the participant must confirm the project is original and solely owned, all submission materials are in English or have English translations, and judges can install and run it free of charge and without restriction through the judging period.
+- Drift note from the 2026-08-27 live form/rules check: optional field `27737` still displays the contradictory hint `#AgentsofFootball`. Do not treat that hint as a requirement. The official rules say they were updated on 2026-08-12 to remove the `#AgentsforHumans` requirement; they say an optional Builder post should use `Agents for Humans` in its title. Leave the field blank unless a truthful public post exists.
 - Devpost requires explicit agreement to the official rules and Devpost terms. No agreement is recorded by this file.
 - The final submission must be performed and confirmed by the participant. This workstream has not registered or submitted Clearline.
 
