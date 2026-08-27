@@ -12,6 +12,7 @@ from .worker import BackgroundWorker
 
 
 STATIC_ROOT = Path(__file__).parent / "static"
+MAX_REQUEST_BODY_BYTES = 16 * 1024
 
 
 class ClearlineHandler(BaseHTTPRequestHandler):
@@ -66,8 +67,16 @@ class ClearlineHandler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def _read_json(self) -> dict[str, object]:
-        length = int(self.headers.get("Content-Length", "0"))
-        return json.loads(self.rfile.read(length) or b"{}")
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+        except ValueError as exc:
+            raise ValueError("invalid content length") from exc
+        if length < 0 or length > MAX_REQUEST_BODY_BYTES:
+            raise ValueError("request body too large or invalid")
+        payload = json.loads(self.rfile.read(length) or b"{}")
+        if not isinstance(payload, dict):
+            raise ValueError("JSON body must be an object")
+        return payload
 
     def _json(self, payload: object, status: HTTPStatus = HTTPStatus.OK) -> None:
         data = json.dumps(payload).encode("utf-8")
