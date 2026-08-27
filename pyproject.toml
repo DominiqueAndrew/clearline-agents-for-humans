@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clearline"
+version = "0.1.0"
+description = "A quiet invoice approval queue powered by a Strands policy agent."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Dominique Kentsa" }]
+dependencies = [
+  "strands-agents>=1.36,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9"]
+
+[project.scripts]
+clearline = "clearline.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["clearline*"]
+

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">Clearline architecture</title>
+  <desc id="desc">An invoice stream enters a background Strands agent and deterministic safety gate, which either files locally or asks for a human decision before writing to an audit log.</desc>
+  <rect width="1200" height="470" rx="24" fill="#f3f6f2"/>
+  <text x="52" y="58" fill="#183a49" font-family="Arial, sans-serif" font-size="25" font-weight="700">Clearline · control plane</text>
+  <text x="52" y="84" fill="#718087" font-family="Arial, sans-serif" font-size="14">Background work stays quiet. Ambiguity stays with a person.</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(52 145)"><rect width="180" height="104" rx="14" fill="#fff" stroke="#dfe7e1"/><circle cx="28" cy="28" r="14" fill="#e9f0ef"/><text x="55" y="32" fill="#183a49" font-size="15" font-weight="700">Invoice stream</text><text x="20" y="64" fill="#718087" font-size="12">synthetic demo</text><text x="20" y="82" fill="#718087" font-size="12">fixtures</text></g>
+    <g transform="translate(288 145)"><rect width="205" height="104" rx="14" fill="#183a49"/><circle cx="28" cy="28" r="14" fill="#e7b56e"/><text x="55" y="32" fill="#fff" font-size="15" font-weight="700">Strands agent</text><text x="20" y="64" fill="#cfdbdc" font-size="12">background sweep</text><text x="20" y="82" fill="#cfdbdc" font-size="12">extract + explain</text></g>
+    <g transform="translate(549 145)"><rect width="214" height="104" rx="14" fill="#fff" stroke="#dfe7e1"/><circle cx="28" cy="28" r="14" fill="#fff4e1"/><text x="55" y="32" fill="#183a49" font-size="15" font-weight="700">Safety gate</text><text x="20" y="64" fill="#718087" font-size="12">policy · duplicate</text><text x="20" y="82" fill="#718087" font-size="12">deterministic outcome</text></g>
+    <g transform="translate(819 92)"><rect width="170" height="90" rx="14" fill="#e9f5ef" stroke="#cfe8dc"/><text x="20" y="31" fill="#278267" font-size="14" font-weight="700">Safe</text><text x="20" y="56" fill="#507a6c" font-size="12">local ledger</text><text x="20" y="73" fill="#507a6c" font-size="12">auto-file</text></g>
+    <g transform="translate(819 210)"><rect width="170" height="90" rx="14" fill="#fff4e1" stroke="#f0dfc1"/><text x="20" y="31" fill="#c27b24" font-size="14" font-weight="700">Ambiguous</text><text x="20" y="56" fill="#96724a" font-size="12">human queue</text><text x="20" y="73" fill="#96724a" font-size="12">approve or hold</text></g>
+    <g transform="translate(1037 145)"><rect width="111" height="104" rx="14" fill="#fff" stroke="#dfe7e1"/><text x="18" y="32" fill="#183a49" font-size="14" font-weight="700">Audit</text><text x="18" y="59" fill="#718087" font-size="12">every</text><text x="18" y="76" fill="#718087" font-size="12">decision</text></g>
+  </g>
+  <g fill="none" stroke="#9eb3ae" stroke-width="2"><path d="M232 197h56"/><path d="M493 197h56"/><path d="M763 180h56"/><path d="M763 231h56"/><path d="M989 137l48 38"/><path d="M989 257l48-38"/></g>
+  <g fill="#9eb3ae"><path d="m283 191 10 6-10 6z"/><path d="m544 191 10 6-10 6z"/><path d="m813 174 10 6-10 6z"/><path d="m813 225 10 6-10 6z"/><path d="m1031 170 10 6-10 6z"/><path d="m1031 213 10 6-10 6z"/></g>
+  <text x="52" y="385" fill="#718087" font-family="Arial, sans-serif" font-size="12">Optional live rationale: AWS Bedrock ⇄ Strands SDK · final status remains deterministic</text>
+</svg>
+

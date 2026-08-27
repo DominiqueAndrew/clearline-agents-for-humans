@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f6f2" />
+    <title>Clearline · invoice decisions, not inbox work</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div><strong>clearline</strong><small>invoice operations</small></div>
+        </div>
+        <div class="workspace-switcher">
+          <span class="workspace-avatar">N</span>
+          <div><strong>Northstar Studio</strong><small>Operations workspace</small></div>
+          <span class="chevron">⌄</span>
+        </div>
+        <nav class="nav-list">
+          <a class="nav-item active" href="#queue"><span class="nav-dot"></span>Decision queue <b id="nav-pending">3</b></a>
+          <a class="nav-item" href="#filed"><span class="nav-dot"></span>Filed automatically</a>
+          <a class="nav-item" href="#audit"><span class="nav-dot"></span>Audit trail</a>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="policy-mini"><span class="status-dot"></span><div><strong>Quiet mode on</strong><small>Last sweep runs in background</small></div></div>
+          <a class="help-link" href="https://github.com/" target="_blank" rel="noreferrer">How Clearline works <span>↗</span></a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="mobile-brand"><div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div><strong>clearline</strong></div>
+          <div class="topbar-right"><span class="live-badge"><span class="status-dot"></span><span id="mode-label">Demo mode</span></span><button class="avatar-button" aria-label="Open profile">DK</button></div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="hero" aria-labelledby="page-title">
+            <div class="hero-copy">
+              <p class="eyebrow">Wednesday · August 26, 2026</p>
+              <h1 id="page-title">Good morning, Dominique.</h1>
+              <p class="hero-subtitle">Your invoice stream is clear. Three decisions need a human eye.</p>
+            </div>
+            <div class="sweep-card">
+              <div class="sweep-icon" aria-hidden="true">✦</div>
+              <div><span class="label">BACKGROUND SWEEP</span><strong id="sweep-status">Complete</strong><small id="last-sweep">No sweep recorded yet</small></div>
+              <button id="run-sweep" class="icon-button" title="Run background sweep" aria-label="Run background sweep">↻</button>
+            </div>
+          </section>
+
+          <section class="stats-grid" aria-label="Invoice summary">
+            <article class="stat-card"><div class="stat-top"><span class="stat-label">NEEDS YOUR CALL</span><span class="stat-icon accent">!</span></div><strong id="stat-pending">3</strong><small>exceptions are waiting</small></article>
+            <article class="stat-card"><div class="stat-top"><span class="stat-label">FILED QUIETLY</span><span class="stat-icon green">✓</span></div><strong id="stat-filed">5</strong><small>no human time needed</small></article>
+            <article class="stat-card"><div class="stat-top"><span class="stat-label">PROCESSED VALUE</span><span class="stat-icon navy">$</span></div><strong id="stat-value">$778</strong><small>this background sweep</small></article>
+            <article class="stat-card policy-stat"><div class="stat-top"><span class="stat-label">ACTIVE POLICY</span><span class="policy-version" id="policy-version">v3.2</span></div><strong id="policy-limit">$500</strong><small>auto-file limit · <span id="po-limit">$250</span> PO threshold</small></article>
+          </section>
+
+          <section class="workspace-grid" id="queue">
+            <div class="queue-panel panel">
+              <div class="panel-heading">
+                <div><p class="eyebrow">INVOICE STREAM</p><h2>Decision queue</h2></div>
+                <span class="count-pill" id="queue-count">8 invoices</span>
+              </div>
+              <div class="filter-row" role="tablist" aria-label="Filter invoices">
+                <button class="filter-button active" data-filter="all" role="tab">All <span id="all-count">8</span></button>
+                <button class="filter-button" data-filter="needs_review" role="tab">Needs you <span id="needs-count">3</span></button>
+                <button class="filter-button" data-filter="auto_filed" role="tab">Filed <span id="filed-count">5</span></button>
+              </div>
+              <div class="invoice-list" id="invoice-list" aria-live="polite"></div>
+            </div>
+
+            <aside class="detail-panel panel" aria-live="polite" id="detail-panel">
+              <div class="empty-detail"><div class="empty-orb">✦</div><strong>Select an invoice</strong><p>Clearline will show the evidence behind every call.</p></div>
+            </aside>
+          </section>
+
+          <section class="audit-panel panel" id="audit">
+            <div class="panel-heading audit-heading"><div><p class="eyebrow">TRACEABLE BY DESIGN</p><h2>Recent activity</h2></div><span class="audit-note"><span class="status-dot"></span> append-only local log</span></div>
+            <div class="audit-list" id="audit-list"></div>
+          </section>
+
+          <footer class="page-footer"><span><span class="status-dot"></span> Clearline is watching quietly</span><span>Policy source · Finance policy <span id="footer-policy">v3.2</span></span></footer>
+        </div>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
+
