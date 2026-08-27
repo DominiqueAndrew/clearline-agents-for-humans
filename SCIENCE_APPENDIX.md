@@ -75,6 +75,8 @@ The current public code commit `8385a09dc6ba332e1f2ad32d66c8c37677734059` additi
 
 A fresh loopback HTTP run also verified `/health` = `200`, initial `pending=3/filed=5/sweep_count=1`, approval of `inv_1002` = `pending=2`, a repeated `/api/run` = `pending=2/sweep_count=2/audit_count=9`, and a new server instance restored `approved/pending=2/sweep_count=3/audit_count=9`.
 
+A focused in-process HTTP boundary rehearsal on the current public code state rejected five requests—non-object JSON, invalid `pay` action, action against an automatically filed invoice, unknown invoice ID, and a 16,385-byte body—with `400` responses; each left invoice statuses, audit count, and sweep count unchanged. A valid approval then produced `6 filed/2 pending`, and two repeat sweeps kept the same stats and `9` audit events while advancing the sweep counter only from `1` to `3`. No external side effects occurred.
+
 The fixture arithmetic is `5 / 8 = 62.5%` auto-filed and `$933 / $2,087 = 44.7%` of the eight-invoice batch value filed automatically. These are demo-batch descriptors, not accuracy or ROI measurements.
 
 ## Limitations and next measurements
