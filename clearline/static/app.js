@@ -37,6 +37,8 @@ function render() {
   if (!state) return;
   const stats = state.stats;
   $("#mode-label").textContent = `${state.sdk.replace(/^AWS /, "")} · ${state.mode}`;
+  const decisionLabel = stats.pending === 1 ? "decision needs" : "decisions need";
+  $("#hero-subtitle").textContent = `Your invoice stream is clear. ${stats.pending} ${decisionLabel} a human eye.`;
   $("#nav-pending").textContent = stats.pending;
   $("#stat-pending").textContent = stats.pending;
   $("#stat-filed").textContent = stats.filed;
