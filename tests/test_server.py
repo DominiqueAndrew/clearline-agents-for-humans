@@ -1,10 +1,18 @@
 import json
+from importlib.resources import files
 from threading import Thread
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 from clearline.server import create_server
 from clearline.store import ClearlineStore
+
+
+def test_packaged_static_assets_are_present():
+    static = files("clearline").joinpath("static")
+    assert static.joinpath("index.html").is_file()
+    assert static.joinpath("styles.css").is_file()
+    assert static.joinpath("app.js").is_file()
 
 
 def test_http_demo_serves_state_and_human_action():
