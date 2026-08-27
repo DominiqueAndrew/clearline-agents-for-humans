@@ -13,7 +13,7 @@ The user is an operations or finance lead who is capable of judging an invoice b
 | Criterion | What the judge can verify in Clearline |
 | --- | --- |
 | Technological Implementation | `StrandsInvoiceAgent` is a real Python SDK adapter; the top bar names `Strands Agents SDK` in both demo and live-rationale modes; `BackgroundWorker` separates scheduling from policy state; policy tools produce structured evidence; tests exercise deterministic, live-rationale, fallback, persistence, and repeat-sweep behavior. |
-| Design | The screen opens on a queue, not a chat. It shows the three-way operational state—filed, needs your call, on hold—and a focused evidence panel with a human action. Responsive review covers mobile, tablet, laptop, desktop, large desktop, and wide desktop. |
+| Design | The screen opens on a queue, not a chat. It shows the three-way operational state—filed, needs your call, on hold—and a focused evidence panel with a human action. The hero sentence is derived from the persisted pending count after every decision, keeping the invitation to act truthful. Responsive review covers mobile, tablet, laptop, desktop, large desktop, and wide desktop. |
 | Potential Impact | The audience and repetitive task are specific. The demo shows five routine invoices disappear into a local ledger while three meaningful exceptions remain. It does not claim production savings from synthetic data. |
 | Creativity & Originality | The wedge is decision-budget protection: automation is measured by the quality of interruptions it removes, not by making approval invisible. The hard safety boundary is part of the product, not an afterthought. |
 | Presentation | `docs/demo-script.md` follows problem → user → why it matters → working end-to-end flow. The recorded path should show background sweep, exact exception evidence, one approval, one hold, refresh/restart persistence, and the Strands seam. |
@@ -27,7 +27,7 @@ Completed in this repository:
 - Science/evidence appendix: [`SCIENCE_APPENDIX.md`](../SCIENCE_APPENDIX.md).
 - Testing instructions for a judge: [`README.md`](../README.md) and the appendix reproduction section.
 - One-command demo smoke check: `python -m clearline.smoke`.
-- Verified public-code receipt (2026-08-27, tested at commit `a84346ae9c2788bbd87e01cc71f93b2de9bdb58b`; later documentation-only commits preserve that tested code): fresh clone install passed `pip check`, `15 passed`, and the smoke invariants (`8` total, `5` filed, `3` pending, no external side effects); the loopback HTTP rehearsal also verified approval, repeat-sweep idempotency, and restart persistence.
+- Verified public-code receipt (2026-08-27, code commit `8385a09dc6ba332e1f2ad32d66c8c37677734059`; later documentation-only commits preserve that tested code): source validation passed `15 passed`, and a fresh isolated install from public `main` passed `pip check`, packaged smoke, and the smoke invariants (`8` total, `5` filed, `3` pending, no external side effects); the installed loopback server returned `200` for `/health`, `/`, and `/api/state`.
 
 Human-only gates still open:
 
