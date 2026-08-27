@@ -26,6 +26,7 @@ These are required by the current form but cannot be inferred safely:
 - Country of residence: **participant must provide and verify** the current country/territory.
 - AWS Builder ID: **participant must provide** their AWS Builder ID.
 - Organization name: leave blank unless submitting on behalf of an organization.
+- Current required submission field mapping: `27729` submitter type, `27730` country of residence, `27732` track, `27733` public repository URL, `27734` architecture upload, and `27735` AWS Builder ID. The public video is a required deliverable; it is not represented as one of these custom field IDs.
 
 ## Registration and submission gates
 
