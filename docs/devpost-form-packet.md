@@ -44,8 +44,9 @@ These are required by the current form but cannot be inferred safely:
 
 ## Final pre-submit verification
 
-1. Pull the intended public repo and record the exact SHA returned by `git ls-remote https://github.com/DominiqueAndrew/clearline-agents-for-humans.git refs/heads/main`; run the checks below from that exact checkout.
-2. Run `python -m clearline.smoke` and `python -m pytest -q` from that exact checkout.
-3. Open the live video URL in a logged-out/private browser and confirm it is public, working, and no longer than five minutes.
-4. Upload `docs/architecture.png`; do not substitute an unverified screenshot or a private file.
-5. Fill participant fields, review eligibility and agreements, then submit only after the participant’s final confirmation.
+1. Create the Devpost project and join/register for the hackathon; confirm the project was created during the Submission Period.
+2. Pull the intended public repo and record the exact SHA returned by `git ls-remote https://github.com/DominiqueAndrew/clearline-agents-for-humans.git refs/heads/main`; run the checks below from that exact checkout.
+3. Run `python -m clearline.smoke` and `python -m pytest -q` from that exact checkout.
+4. Open the live video URL in a logged-out/private browser and confirm it is public, working, and no longer than five minutes.
+5. Upload `docs/architecture.png`; do not substitute an unverified screenshot or a private file.
+6. Fill participant fields, review eligibility and agreements, then submit only after the participant’s final confirmation.
