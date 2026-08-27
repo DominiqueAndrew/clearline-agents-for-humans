@@ -55,7 +55,7 @@ For this workflow, a silent exception is intentionally treated as more costly th
 
 ## Reproducible experiments and current results
 
-The tests use eight fixed synthetic invoices: five satisfy every encoded safe condition and three intentionally surface for over-limit, missing-PO, or duplicate evidence. The current local run of `.venv/bin/python -m pytest -q` completed with `13 passed`; runtime duration is intentionally omitted because it varies by host.
+The tests use eight fixed synthetic invoices: five satisfy every encoded safe condition and three intentionally surface for over-limit, missing-PO, or duplicate evidence. The current local run of `.venv/bin/python -m pytest -q` completed with `15 passed`; runtime duration is intentionally omitted because it varies by host.
 
 | Experiment | Expected invariant | Result recorded by the test suite |
 | --- | --- | --- |
