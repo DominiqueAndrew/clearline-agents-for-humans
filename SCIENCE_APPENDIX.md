@@ -69,6 +69,8 @@ The tests use eight fixed synthetic invoices: five satisfy every encoded safe co
 
 The latest responsive review also captured and visually inspected the six required viewport artifacts under `/Users/dominique/.codex/visualizations/2026/08/27/01a04367-649a-7441-80cd-018ddd3048c1/clearline/`: `mobile-390x844-v6.png`, `tablet-768x1024-v6.png`, `laptop-1366x768-v6.png`, `desktop-1440x900-v6.png`, `large-desktop-1920x1080-v6.png`, and `wide-desktop-2560x1440-v6.png`. The review found no visible horizontal overflow; the desktop action stayed within the captured frame after the compact-height rule was adjusted.
 
+A packaged-wheel replay on 2026-08-27 was also visually inspected at `390×844`, `768×1024`, `1366×768`, `1440×900`, `1920×1080`, and `2560×1440`. The captures are `.playwright-cli/page-2026-08-27T15-44-15-849Z.png`, `...16-920Z.png`, `...17-986Z.png`, `...19-073Z.png`, `...20-323Z.png`, and `...21-579Z.png`; each measured `scrollWidth == bodyWidth == viewport`, and each rendered the `Strands Agents SDK · demo mode` badge plus both human-action controls in the DOM. The same installed wheel replay showed the scripted LumaStack filed state, Northstar evidence and approval, duplicate detection and hold, audit entries, and approval persistence after refresh.
+
 A fresh loopback HTTP run also verified `/health` = `200`, initial `pending=3/filed=5/sweep_count=1`, approval of `inv_1002` = `pending=2`, a repeated `/api/run` = `pending=2/sweep_count=2/audit_count=9`, and a new server instance restored `approved/pending=2/sweep_count=3/audit_count=9`.
 
 The fixture arithmetic is `5 / 8 = 62.5%` auto-filed and `$933 / $2,087 = 44.7%` of the eight-invoice batch value filed automatically. These are demo-batch descriptors, not accuracy or ROI measurements.
