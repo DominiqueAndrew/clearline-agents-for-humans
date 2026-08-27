@@ -89,10 +89,13 @@ From the repository root:
 python3 -m venv .venv
 .venv/bin/python -m pip install -e '.[dev]'
 .venv/bin/python -m pytest -q
+.venv/bin/python -m clearline.smoke
 node --check clearline/static/app.js
 python3 -m compileall -q clearline tests
 git diff --check
 ```
+
+The smoke command returned `Clearline smoke passed` with `8` invoices, `5` filed, `3` pending, `repeat_sweep_audit=8`, `approval_persisted=true`, and `external_side_effects=false`.
 
 The default server is credential-free:
 

@@ -26,6 +26,7 @@ Completed in this repository:
 - Apache 2.0 license, README, source, tests, architecture Markdown, and architecture SVG.
 - Science/evidence appendix: [`SCIENCE_APPENDIX.md`](../SCIENCE_APPENDIX.md).
 - Testing instructions for a judge: [`README.md`](../README.md) and the appendix reproduction section.
+- One-command demo smoke check: `python -m clearline.smoke`.
 
 Human-only gates still open:
 

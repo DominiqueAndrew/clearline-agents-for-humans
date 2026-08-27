@@ -52,6 +52,12 @@ If Bedrock is unavailable, Clearline records the fallback and continues using th
 python -m pytest -q
 ```
 
+For a one-command, credential-free demo check that exercises the background sweep, repeat-sweep safety, human gate, and restart persistence:
+
+```bash
+python -m clearline.smoke
+```
+
 ## Submission materials
 
 - Product spec and acceptance criteria: [`docs/spec.md`](docs/spec.md)
