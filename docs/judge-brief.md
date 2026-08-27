@@ -23,7 +23,7 @@ The user is an operations or finance lead who is capable of judging an invoice b
 Completed in this repository:
 
 - Public GitHub repo: [DominiqueAndrew/clearline-agents-for-humans](https://github.com/DominiqueAndrew/clearline-agents-for-humans)
-- Apache 2.0 license, README, source, tests, architecture Markdown, and architecture SVG.
+- Apache 2.0 license, README, source, tests, architecture Markdown, SVG source, and the Devpost-uploadable PNG diagram.
 - Science/evidence appendix: [`SCIENCE_APPENDIX.md`](../SCIENCE_APPENDIX.md).
 - Testing instructions for a judge: [`README.md`](../README.md) and the appendix reproduction section.
 - One-command demo smoke check: `python -m clearline.smoke`.

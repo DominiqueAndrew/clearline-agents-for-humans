@@ -108,3 +108,5 @@ For the optional model rationale path, configure AWS through the normal SDK cred
 ## Official hackathon snapshot
 
 The [Devpost Hackathons plugin](https://agentsforhumans.devpost.com/) was queried on 2026-08-27. It returned `submissions_open`, submissions ending at `2026-09-15T00:00:00Z`, a `$40,000` total prize value, solo participation as an available registration choice, and the Professional Agents track. The [official rules](https://agentsforhumans.devpost.com/rules) and [submission requirements](https://agentsforhumans.devpost.com/details) remain the authority for eligibility, agreements, required fields, and final submission. Clearline has not registered, supplied an AWS Builder ID, published a video, or submitted a project through this workstream.
+
+The requirements response accepts `png`, `jpg`, `jpeg`, `pdf`, `ppt`, or `pptx` for the required architecture upload. `docs/architecture.png` is a 2800×940 RGBA PNG rendered from the committed SVG source and visually inspected before this milestone.
