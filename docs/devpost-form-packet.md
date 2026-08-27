@@ -31,12 +31,13 @@ These are required by the current form but cannot be inferred safely:
 
 - Registration form says team preference and several experience questions are required; the participant must answer them.
 - The rules page states the participant must be above the legal age of majority in their country of residence and observes the listed geographic exclusions; the participant must verify eligibility.
+- The rules require a new project created during the submission period. This repository was created during the current submission period; the participant must disclose any pre-existing code or work and confirm that every third-party integration is authorized.
 - Devpost requires explicit agreement to the official rules and Devpost terms. No agreement is recorded by this file.
 - The final submission must be performed and confirmed by the participant. This workstream has not registered or submitted Clearline.
 
 ## Final pre-submit verification
 
-1. Pull the intended public repo and verify its HEAD is `20c683b552cfa3a301423c571c0b4d1912d38fe2` or a later participant-approved commit.
+1. Pull the intended public repo and verify its HEAD is `d186e43773607d9a925726884a98150cc8813613` or a later participant-approved commit.
 2. Run `python -m clearline.smoke` and `python -m pytest -q` from that exact checkout.
 3. Open the live video URL in a logged-out/private browser and confirm it is public, working, and no longer than five minutes.
 4. Upload `docs/architecture.png`; do not substitute an unverified screenshot or a private file.

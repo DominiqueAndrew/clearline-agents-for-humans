@@ -10,6 +10,7 @@ This checklist is intentionally honest: Devpost account actions, AWS Builder ID,
 - [x] MIT or Apache license file: `LICENSE` (Apache 2.0).
 - [x] README with setup and testing instructions.
 - [x] Architecture diagram: `docs/architecture.md`, source `docs/architecture.svg`, and Devpost-uploadable `docs/architecture.png`.
+- [x] Project was created during the submission period; any pre-existing code or work and any third-party integrations must be disclosed and authorized before submission.
 - [ ] Public demo video, maximum 5 minutes, with problem, user, why it matters, and working demo.
 - [ ] AWS Builder ID: human account detail required.
 - [ ] Devpost eligibility, registration, agreements, and final submission: human-only.
