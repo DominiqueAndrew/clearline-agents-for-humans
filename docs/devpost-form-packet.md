@@ -43,7 +43,7 @@ These are required by the current form but cannot be inferred safely:
 
 ## Final pre-submit verification
 
-1. Pull the intended public repo and verify its HEAD is `930bfa115b19232504a6caa41808b52b856fee48` or a later participant-approved commit.
+1. Pull the intended public repo and record the exact SHA returned by `git ls-remote https://github.com/DominiqueAndrew/clearline-agents-for-humans.git refs/heads/main`; run the checks below from that exact checkout.
 2. Run `python -m clearline.smoke` and `python -m pytest -q` from that exact checkout.
 3. Open the live video URL in a logged-out/private browser and confirm it is public, working, and no longer than five minutes.
 4. Upload `docs/architecture.png`; do not substitute an unverified screenshot or a private file.
