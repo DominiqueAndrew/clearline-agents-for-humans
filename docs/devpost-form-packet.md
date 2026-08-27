@@ -65,7 +65,9 @@ Each row is intentionally a human gate. The evidence column is what to retain af
 1. Create the Devpost project and join/register for the hackathon; confirm the project was created during the Submission Period.
 2. Pull the intended public repo and record the exact SHA returned by `git ls-remote https://github.com/DominiqueAndrew/clearline-agents-for-humans.git refs/heads/main`; run the checks below from that exact checkout.
 3. Run `python -m clearline.smoke` and `python -m pytest -q` from that exact checkout.
-4. Open the live video URL in a logged-out/private browser and confirm it is public, working, and no longer than five minutes.
+4. Open the live video URL in a logged-out/private browser and confirm it is public and accessible (not private or an unshared unlisted video), no longer than five minutes, and shows the app working—not only slides or a mockup—while explaining the problem, solution, and Strands use.
 5. Upload `docs/architecture.png`; do not substitute an unverified screenshot or a private file.
 6. Run the public-repo secret scan above and resolve every match before publishing.
 7. Fill participant fields, review eligibility and agreements, then submit only after the participant’s final confirmation.
+
+**Deadline freeze:** The current Devpost instructions say that after the deadline, the project, submission form, code repository, and video must not be edited—even for a typo—until after the winners are announced. Capture the final public-main SHA, form review, architecture upload, and video check before `2026-09-15T00:00:00Z`, then leave those artifacts unchanged through judging.
