@@ -12,7 +12,7 @@ The user is an operations or finance lead who is capable of judging an invoice b
 
 | Criterion | What the judge can verify in Clearline |
 | --- | --- |
-| Technological Implementation | `StrandsInvoiceAgent` is a real Python SDK adapter; `BackgroundWorker` separates scheduling from policy state; policy tools produce structured evidence; tests exercise deterministic, live-rationale, fallback, persistence, and repeat-sweep behavior. |
+| Technological Implementation | `StrandsInvoiceAgent` is a real Python SDK adapter; the top bar names `Strands Agents SDK` in both demo and live-rationale modes; `BackgroundWorker` separates scheduling from policy state; policy tools produce structured evidence; tests exercise deterministic, live-rationale, fallback, persistence, and repeat-sweep behavior. |
 | Design | The screen opens on a queue, not a chat. It shows the three-way operational state—filed, needs your call, on hold—and a focused evidence panel with a human action. Responsive review covers mobile, tablet, laptop, desktop, large desktop, and wide desktop. |
 | Potential Impact | The audience and repetitive task are specific. The demo shows five routine invoices disappear into a local ledger while three meaningful exceptions remain. It does not claim production savings from synthetic data. |
 | Creativity & Originality | The wedge is decision-budget protection: automation is measured by the quality of interruptions it removes, not by making approval invisible. The hard safety boundary is part of the product, not an afterthought. |

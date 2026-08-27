@@ -36,7 +36,7 @@ function render() {
   const { state } = app;
   if (!state) return;
   const stats = state.stats;
-  $("#mode-label").textContent = state.mode;
+  $("#mode-label").textContent = `${state.sdk.replace(/^AWS /, "")} · ${state.mode}`;
   $("#nav-pending").textContent = stats.pending;
   $("#stat-pending").textContent = stats.pending;
   $("#stat-filed").textContent = stats.filed;
