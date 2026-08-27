@@ -103,6 +103,8 @@ The smoke command returned `Clearline smoke passed` with `8` invoices, `5` filed
 
 The published distribution was also checked separately from the checkout on 2026-08-27. A PEP 517 wheel build produced `clearline-0.1.0-py3-none-any.whl`; that wheel was installed into a fresh virtual environment from a temporary working directory, where `pip check`, the installed `clearline --help` and `python -m clearline --help` entry points, and `python -m clearline.smoke` all passed. The import resolved from temporary `site-packages`, which guards against accidentally testing the editable source tree. The packaged smoke result matched the source result: `8` invoices, `5` filed, `3` pending, `repeat_sweep_audit=8`, `approval_persisted=true`, and `external_side_effects=false`. The wheel manifest includes `clearline/static/index.html`, `styles.css`, and `app.js`; an installed-server `GET /` returned `200` and the Clearline UI, closing the source-versus-distribution gap.
 
+A fresh public-main release rehearsal later the same day cloned `6ba22085d3ce3ead471eaffe5b18a87734966160` and confirmed it matched `refs/heads/main`. From outside the checkout, an isolated install passed `pip check`, `15 passed`, the packaged smoke invariants, JavaScript syntax and Python compilation checks; the Apache license, architecture PNG/SVG, submission packet, judge brief, and science appendix were present; the high-confidence secret scan was clean; and the installed server returned `200` for `/health`, `/`, and `/api/state` with the expected initial `pending=3` state.
+
 The default server is credential-free:
 
 ```bash
