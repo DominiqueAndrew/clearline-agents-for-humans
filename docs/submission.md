@@ -17,7 +17,7 @@ This checklist is intentionally honest: Devpost account actions, AWS Builder ID,
 
 ## Project description draft
 
-Clearline is the invoice queue that only asks for a human when the invoice is genuinely ambiguous. A background Strands agent reads a synthetic invoice stream, checks vendor, duplicate, PO, and amount rules, and files routine invoices locally. It surfaces exceptions with the exact evidence behind them, then lets a person approve or hold the case. It never pays a vendor or sends a message, and every action lands in an audit feed.
+Clearline is the invoice queue that only asks for a human when the invoice is genuinely ambiguous. A background invoice agent reads a synthetic invoice stream, checks vendor, duplicate, PO, and amount rules, and files routine invoices locally. Its `StrandsInvoiceAgent` adapter can add a concise model rationale through the Strands Agents SDK and Amazon Bedrock without changing the deterministic outcome. It surfaces exceptions with the exact evidence behind them, then lets a person approve or hold the case. It never pays a vendor or sends a message, and every action lands in an audit feed.
 
 ## Video outline
 

@@ -11,7 +11,7 @@ This is a narrow [Agents for Humans](https://agentsforhumans.devpost.com/) hacka
 ## The 90-second mental model
 
 1. An invoice arrives in the shared inbox.
-2. A background worker starts one Strands sweep without a decision screen open.
+2. A background worker starts one deterministic sweep through the `StrandsInvoiceAgent` seam without a decision screen open.
 3. The agent extracts and checks it against the deterministic policy.
 4. Safe invoices are filed automatically.
 5. Exceptions land in `Needs your call` with evidence.
