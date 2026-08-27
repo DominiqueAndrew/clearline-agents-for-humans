@@ -47,6 +47,8 @@ These are required by the current form but cannot be inferred safely:
 
 Each row is intentionally a human gate. The evidence column is what to retain after the action; an unavailable credential or account must leave the gate open rather than be guessed.
 
+**Current timing receipt (queried 2026-08-27):** Devpost reports submissions open until `2026-09-15T00:00:00Z`, which is September 14, 2026 at 5:00 PM PT. Recheck the [official event page](https://agentsforhumans.devpost.com/) immediately before uploading or submitting; its live date is authoritative.
+
 | Gate | Required input | One click or command path | Expected evidence | Fallback if unavailable |
 | --- | --- | --- | --- | --- |
 | Register | Participant eligibility, country, one team preference, five required registration answers, and explicit agreement to the [rules](https://agentsforhumans.devpost.com/rules) and [Devpost terms](https://info.devpost.com/terms). | Open [Agents for Humans](https://agentsforhumans.devpost.com/) → **Register** → choose `Working solo` (or the participant’s true choice) → answer the live form → review both agreements → confirm. | Devpost registration confirmation/status for the participant. | Keep registration unchecked; Clearline remains runnable and the project must not be submitted. |
