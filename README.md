@@ -10,13 +10,18 @@ This is a narrow [Agents for Humans](https://agentsforhumans.devpost.com/) hacka
 
 ## The 90-second mental model
 
-1. An invoice arrives in the stream.
-2. The Strands agent extracts and checks it with policy tools.
-3. Safe invoices are filed automatically.
-4. Exceptions land in `Needs your call` with evidence.
-5. A human explicitly approves or holds the exception.
+1. An invoice arrives in the shared inbox.
+2. A background worker starts one Strands sweep without a decision screen open.
+3. The agent extracts and checks it with policy tools.
+4. Safe invoices are filed automatically.
+5. Exceptions land in `Needs your call` with evidence.
+6. A human explicitly approves or holds the exception.
 
 The default demo path is deterministic so judges can run it without credentials. Set `CLEARLINE_STRANDS_LIVE=1` to let the official Strands SDK add a model-generated rationale through Amazon Bedrock; the deterministic policy gate remains authoritative in both modes.
+
+## Why this is more than invoice extraction
+
+Most automation tries to make approval disappear. Clearline protects a team’s decision budget instead: routine work is quiet, while every interruption arrives as a small, policy-versioned decision packet with evidence. The differentiator is the boundary and its provenance—not a chat window and not silent model judgment.
 
 ## Run it locally
 
@@ -53,6 +58,7 @@ python -m pytest -q
 - Architecture: [`docs/architecture.md`](docs/architecture.md)
 - Two-minute recording plan: [`docs/demo-script.md`](docs/demo-script.md)
 - Truthful submission checklist: [`docs/submission.md`](docs/submission.md)
+- Science and engineering appendix: [`SCIENCE_APPENDIX.md`](SCIENCE_APPENDIX.md)
 
 ## License
 

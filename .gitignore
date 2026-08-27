@@ -9,3 +9,5 @@ build/
 *.egg-info/
 data/*.json
 data/*.sqlite3
+/.omo/
+/.playwright-cli/

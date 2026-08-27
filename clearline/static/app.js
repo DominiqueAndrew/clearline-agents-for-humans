@@ -85,8 +85,8 @@ function renderDetail() {
   const actions = isPending ? `<div class="action-row"><button class="action-button primary" data-action="approve">Approve &amp; file</button><button class="action-button secondary" data-action="hold">Hold &amp; request info</button></div>` : `<div class="resolved-note"><strong>${escapeHtml(label)}</strong> · recorded by ${escapeHtml(decision.decided_by)} ${relativeTime(decision.decided_at)}. No external action was taken.</div>`;
   $("#detail-panel").innerHTML = `<div class="detail-header"><div><span class="badge badge-${tone === "review" ? "review" : tone === "hold" ? "hold" : tone === "resolved" ? "approved" : "auto"}">${escapeHtml(label)}</span><h3>${escapeHtml(invoice.vendor)}</h3><p class="detail-number">${escapeHtml(invoice.invoice_number)} · due ${escapeHtml(invoice.due_date)}</p></div><strong class="detail-amount">${money(invoice.amount_cents, invoice.currency)}</strong></div>
     <p class="detail-description">${escapeHtml(invoice.description)}</p>
-    <div class="decision-callout${calloutClass}"><span class="callout-label">${isPending ? "CLEARLINE RECOMMENDS" : "DECISION RECORDED"}</span><strong>${escapeHtml(decision.recommendation)}</strong><p>${isPending ? "The policy gate kept this out of the ledger until you decide." : "This case is now out of the pending queue."}</p></div>
-    <div class="evidence-heading"><span>EVIDENCE COLLECTED</span><span class="confidence">${decision.confidence}% confidence</span></div>
+    <div class="decision-callout${calloutClass}"><span class="callout-label">${isPending ? "CLEARLINE RECOMMENDS" : "DECISION RECORDED"}</span><strong>${escapeHtml(decision.recommendation)}</strong><p>${isPending ? "The policy gate kept this out of the ledger until you decide." : "This case is now out of the pending queue."}</p><span class="provenance-note">Decision source · policy ${escapeHtml(app.state.policy.version)}</span></div>
+    <div class="evidence-heading"><span>EVIDENCE COLLECTED</span><span class="confidence">${decision.confidence}% rule coverage</span></div>
     <ul class="evidence-list">${decision.evidence.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>${reasons}${decision.rationale ? `<div class="reason-block"><div class="evidence-heading">STRANDS RATIONALE</div><p class="detail-description">${escapeHtml(decision.rationale)}</p></div>` : ""}${actions}`;
   document.querySelectorAll("[data-action]").forEach((button) => button.addEventListener("click", () => decide(button.dataset.action)));
 }
@@ -122,4 +122,3 @@ document.querySelectorAll("[data-filter]").forEach((button) => button.addEventLi
 }));
 $("#run-sweep").addEventListener("click", runSweep);
 request("/api/state").then((state) => { app.state = state; render(); }).catch((error) => { $("#invoice-list").innerHTML = `<div class="empty-audit">Could not connect to Clearline: ${escapeHtml(error.message)}</div>`; });
-

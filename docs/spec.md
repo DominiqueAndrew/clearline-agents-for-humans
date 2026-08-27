@@ -34,7 +34,7 @@ Track: Professional Agents.
 
 ### Background triage
 
-Given a clean demo start, when the worker starts without a decision screen open, then all eight synthetic inbox items receive a decision and the UI shows the counts for filed, surfaced, and value processed.
+Given a clean demo start, when the background worker starts without a decision screen open, then all eight synthetic inbox items receive a decision and the UI shows the counts for filed, surfaced, and value processed.
 
 ### Policy evidence
 
@@ -49,6 +49,8 @@ Given a surfaced invoice, when a user chooses `Approve & file`, then its status 
 Given a surfaced invoice, when a user chooses `Hold & request info`, then its status changes to `On hold`, no external action is performed, and an audit event records the hold.
 
 Given a human decision has been recorded, when the worker or UI is restarted, then the final status and audit event remain visible from the local state file.
+
+Given the worker runs twice for the same inbox snapshot, when the second sweep completes, then no duplicate decision or audit events are created and human decisions remain unchanged.
 
 ### Safety and reproducibility
 

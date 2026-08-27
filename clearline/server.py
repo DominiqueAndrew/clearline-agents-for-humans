@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from .store import ClearlineStore
+from .worker import BackgroundWorker
 
 
 STATIC_ROOT = Path(__file__).parent / "static"
@@ -82,6 +83,7 @@ class ClearlineHandler(BaseHTTPRequestHandler):
 
 
 def create_server(host: str = "127.0.0.1", port: int = 8787, store: ClearlineStore | None = None) -> ThreadingHTTPServer:
-    ClearlineHandler.store = store or ClearlineStore()
+    bound_store = store or ClearlineStore()
+    BackgroundWorker(bound_store).run_once()
+    ClearlineHandler.store = bound_store
     return ThreadingHTTPServer((host, port), ClearlineHandler)
-

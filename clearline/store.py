@@ -32,7 +32,6 @@ class ClearlineStore:
         configured_path = db_path if db_path is not None else os.getenv("CLEARLINE_STATE_FILE", "data/clearline-state.json")
         self._state_path = None if str(configured_path) == ":memory:" else Path(configured_path)
         self._load()
-        self.run_sweep()
 
     def run_sweep(self) -> dict[str, Any]:
         with self._lock:
